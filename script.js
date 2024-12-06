@@ -1,6 +1,6 @@
 window.onload = function() {
     // Data de início do relacionamento
-    const dataInicial = new Date('2020-01-01T00:00:00'); // Mude para a data de início de vocês
+    const dataInicial = new Date('2024-07-21T21:00:00'); // Mude para a data de início de vocês
     const contador = document.getElementById('contador');
     const mensagem = document.getElementById('mensagem');
 
