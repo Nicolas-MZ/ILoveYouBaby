@@ -5,7 +5,7 @@ body {
     align-items: center;
     height: 100vh;
     margin: 0;
-    background-color: #f0f0f0;
+    background-color: #000; /* Fundo preto */
 }
 
 .container {
@@ -27,9 +27,7 @@ h2 {
 }
 
 .background {
-    background-image: url('https://www.dicaspraticas.com.br/wp-content/uploads/2020/05/desenhos-de-coracao-para-colorir-13.jpg');
-    background-size: cover;
-    background-position: center;
+    background-color: #000; /* Fundo preto */
     position: fixed;
     top: 0;
     left: 0;
