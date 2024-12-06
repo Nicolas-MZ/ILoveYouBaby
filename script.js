@@ -1,5 +1,4 @@
 window.onload = function() {
-    // Data de início do relacionamento
     const dataInicial = new Date('2024-07-21T21:00:00'); // Data inicial do relacionamento
     const contador = document.getElementById('contador');
     const mensagem = document.getElementById('mensagem');
