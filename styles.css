@@ -27,7 +27,7 @@ h2 {
 }
 
 .background {
-    background-image: url('https://github.com/Nicolas-MZ/ILoveYouBaby/blob/main/IMG-20241125-WA0043.jpg');
+    background-image: url('https://raw.githubusercontent.com/Nicolas-MZ/ILoveYouBaby/refs/heads/main/IMG-20241125-WA0043.jpg');
     background-size: cover;
     background-position: center;
     position: fixed;
