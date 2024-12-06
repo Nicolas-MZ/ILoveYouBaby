@@ -27,7 +27,7 @@ h2 {
 }
 
 .background {
-    background-image: url('sua-imagem-de-fundo.jpg');
+    background-image: url('https://www.bing.com/images/search?view=detailV2&ccid=9VwsfKQ5&id=119994D9945F74BD7BF63DEDAE6B964205769774&thid=OIP.9VwsfKQ54d8HavmcG5fm-AHaGc&mediaurl=https%3a%2f%2fwww.dicaspraticas.com.br%2fwp-content%2fuploads%2f2020%2f05%2fdesenhos-de-coracao-para-colorir-13.jpg&cdnurl=https%3a%2f%2fth.bing.com%2fth%2fid%2fR.f55c2c7ca439e1df076af99c1b97e6f8%3frik%3ddJd2BUKWa67tPQ%26pid%3dImgRaw%26r%3d0&exph=1062&expw=1221&q=foto+de+cora%c3%a7oes&simid=607991877721005613&FORM=IRPRST&ck=475658DB1F7C2C0061DA23E994540919&selectedIndex=2&itb=0');
     background-size: cover;
     background-position: center;
     position: fixed;
