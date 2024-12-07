@@ -4,14 +4,14 @@ window.onload = function() {
     const mensagem = document.getElementById('mensagem');
 
     const frases = [
-        "Você é o amor da minha vida!",
-        "Cada dia ao seu lado é uma aventura",
-        "Amo você mais a cada dia.",
-        "Você ilumina minha vida.",
-        "Meu mundo é melhor com você.",
-        "Desde que te conheci, cada dia é uma aventura maravilhosa.", 
+        "Desde que te conheci, cada dia é uma aventura maravilhosa.",
         "Seu sorriso ilumina meus dias, e seus olhos castanhos me encantam a cada olhar.",
-        "Cada momento com você é um tesouro que guardo no meu coração."
+        "Amo os seus cabelos vermelhos que refletem sua paixão e alegria.",
+        "Você trouxe cor e vida aos meus dias, e eu sou eternamente grato.",
+        "Cada momento com você é um tesouro que guardo no meu coração.",
+        "Os dias ao seu lado são preenchidos com amor e felicidade.",
+        "Você é a melodia que embala meus dias e a paz que acalma meu coração.",
+        "Seu amor é a luz que guia meu caminho e o calor que aquece meu coração."
     ];
 
     function atualizarContador() {
@@ -35,7 +35,7 @@ window.onload = function() {
 
         const segundos = Math.floor(diferenca / 1000);
 
-        contador.textContent = `Juntos há ${anos} anos, ${meses} meses, ${dias} dias, ${horas} horas, ${minutos} minutos e ${segundos} segundos!`;
+        contador.textContent = `Estamos juntos há ${anos} anos, ${meses} meses, ${dias} dias, ${horas} horas, ${minutos} minutos e ${segundos} segundos!`;
     }
 
     function mostrarMensagem() {
