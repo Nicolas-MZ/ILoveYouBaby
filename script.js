@@ -32,7 +32,7 @@ window.onload = function() {
 
         const segundos = Math.floor(diferenca / 1000);
 
-        contador.textContent = `Estamos juntos há ${anos} anos, ${meses} meses, ${dias} dias, ${horas} horas, ${minutos} minutos e ${segundos} segundos!`;
+        contador.textContent = `Juntos há ${anos} anos, ${meses} meses, ${dias} dias, ${horas} horas, ${minutos} minutos e ${segundos} segundos!`;
     }
 
     function mostrarMensagem() {
