@@ -9,12 +9,14 @@
 <body>
     <div class="container">
         <img src="https://raw.githubusercontent.com/Nicolas-MZ/ILoveYouBaby/main/IMG-20241125-WA0043.jpg" alt="Nossa Foto" class="foto">
-        <h2>Nicolas & Byanca</h2>
+        <h2 class="nomes">Nicolas & Byanca</h2>
         <p id="contador"></p>
-        <p id="mensagem"></p>
+        <p id="mensagem" class="destaque"></p>
         <div class="background"></div>
-        <!-- Adiciona o link do Spotify para a playlist -->
-        <iframe src="https://open.spotify.com/playlist/7wPOIAMnQp1xSk3Rom4IWi?si=6b289df6cb0e4c54&pt=31bd5e3c1e19cc522ba23cbf00c5890c" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+        <!-- Adiciona o player do Spotify para a playlist no canto inferior direito -->
+        <div class="spotify-player">
+            <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/7wPOIAMnQp1xSk3Rom4IWi?utm_source=generator&theme=0" width="300" height="80" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        </div>
     </div>
     <script src="script.js"></script>
 </body>
