@@ -5,10 +5,13 @@ window.onload = function() {
 
     const frases = [
         "Você é o amor da minha vida!",
-        "Cada dia ao seu lado é uma bênção.",
+        "Cada dia ao seu lado é uma aventura",
         "Amo você mais a cada dia.",
         "Você ilumina minha vida.",
-        "Meu mundo é melhor com você."
+        "Meu mundo é melhor com você.",
+        "Desde que te conheci, cada dia é uma aventura maravilhosa.", 
+        "Seu sorriso ilumina meus dias, e seus olhos castanhos me encantam a cada olhar.",
+        "Cada momento com você é um tesouro que guardo no meu coração."
     ];
 
     function atualizarContador() {
