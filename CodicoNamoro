@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Presente de Namoro</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        .photo-container {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+        img {
+            max-width: 100%;
+            border-radius: 10px;
+        }
+        .countdown {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        .quote {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+        iframe {
+            border: none;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="photo-container">
+        <img src="sua_foto.jpg" alt="Foto do Casal">
+    </div>
+    <div>
+        <h1>Seu Nome & Nome da Pessoa Amada</h1>
+    </div>
+    <div class="countdown">
+        <p id="timer"></p>
+    </div>
+    <div class="quote" id="quote">
+        <!-- A frase romântica será atualizada aqui -->
+    </div>
+    <div>
+        <iframe src="https://open.spotify.com/embed/track/ID_DA_MUSICA" width="300" height="380" allow="autoplay; encrypted-media"></iframe>
+    </div>
+    <script>
+        // Calcular o tempo juntos
+        const startDate = new Date('2024-07-21T21:00:00');
+        setInterval(() => {
+            const now = new Date();
+            const elapsed = now - startDate;
+            const years = Math.floor(elapsed / (1000 * 60 * 60 * 24 * 365));
+            const months = Math.floor(elapsed / (1000 * 60 * 60 * 24 * 30)) % 12;
+            const days = Math.floor(elapsed / (1000 * 60 * 60 * 24)) % 30;
+            const hours = Math.floor((elapsed / (1000 * 60 * 60)) % 24);
+            const minutes = Math.floor((elapsed / (1000 * 60)) % 60);
+            const seconds = Math.floor((elapsed / 1000) % 60);
+
+            document.getElementById('timer').innerText = `${years} anos, ${months} meses, ${days} dias, ${hours} horas, ${minutes} minutos e ${seconds} segundos`;
+        }, 1000);
+
+        // Lista de frases românticas
+        const quotes = [
+            "Amar não é olhar um para o outro, é olhar juntos na mesma direção.",
+            "Te amo não por quem tu és, mas por quem sou quando estou contigo.",
+            "Em cada lugar do mundo, eu só quero estar contigo."
+        ];
+
+        // Atualizar a frase romântica
+        function updateQuote() {
+            const randomIndex = Math.floor(Math.random() * quotes.length);
+            document.getElementById('quote').innerText = quotes[randomIndex];
+        }
+
+        updateQuote();
+        setInterval(updateQuote, 3000);
+    </script>
+</body>
+</html>
