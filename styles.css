@@ -10,13 +10,13 @@ body {
 }
 
 .container {
-    background-color: #333;
+    background-color: #f0f0f0;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
     text-align: center;
     max-width: 500px;
-    width: 100%;
+    width: 90%;
 }
 
 .photo-container {
@@ -31,20 +31,37 @@ img {
 }
 
 h1 {
+    font-size: 2.5em;
+    color: darkmagenta;
     margin: 10px 0;
 }
 
 .countdown {
-    font-size: 24px;
+    font-size: 1.25em;
+    color: white;
     margin-bottom: 20px;
 }
 
 .quote {
-    font-size: 18px;
+    font-size: 1.5em;
+    color: darkmagenta;
     margin-bottom: 20px;
 }
 
 iframe {
     border: none;
     margin-top: 20px;
+}
+
+/* Responsividade para mobile */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 2em;
+    }
+    .countdown {
+        font-size: 1em;
+    }
+    .quote {
+        font-size: 1.25em;
+    }
 }
