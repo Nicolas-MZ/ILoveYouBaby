@@ -45,9 +45,6 @@ body {
 }
 
 .background {
-    background-image: url('https://raw.githubusercontent.com/Nicolas-MZ/ILoveYouBaby/main/coracao-pulsando.gif'); /* Imagem de coração pulsando */
-    background-size: cover;
-    background-position: center;
     position: fixed;
     top: 0;
     left: 0;
@@ -56,12 +53,21 @@ body {
     z-index: -1;
     animation: pulsar 2s infinite;
     opacity: 0.5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.gif-coracao {
+    max-width: 50%; /* Ajusta o tamanho do gif conforme necessário */
+    max-height: 50%;
 }
 
 .spotify-player {
     position: fixed;
     bottom: 20px;
     right: 20px;
+    width: 300px; /* Ajusta a largura do player */
 }
 
 iframe {
