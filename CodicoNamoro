@@ -36,10 +36,10 @@
 </head>
 <body>
     <div class="photo-container">
-        <img src="sua_foto.jpg" alt="Foto do Casal">
+        <img src="https://raw.githubusercontent.com/Nicolas-MZ/ILoveYouBaby/refs/heads/main/FotoNamoro.jpg" alt="Foto do Casal">
     </div>
     <div>
-        <h1>Seu Nome & Nome da Pessoa Amada</h1>
+        <h1>Nicolas & Byanca</h1>
     </div>
     <div class="countdown">
         <p id="timer"></p>
@@ -48,7 +48,7 @@
         <!-- A frase romântica será atualizada aqui -->
     </div>
     <div>
-        <iframe src="https://open.spotify.com/embed/track/ID_DA_MUSICA" width="300" height="380" allow="autoplay; encrypted-media"></iframe>
+        <iframe src="https://open.spotify.com/intl-pt/track/2LwsunYgfRoqyIsNtgOCQx?si=f6ff0cb3c414476d" width="300" height="380" allow="autoplay; encrypted-media"></iframe>
     </div>
     <script>
         // Calcular o tempo juntos
