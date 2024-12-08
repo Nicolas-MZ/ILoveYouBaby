@@ -32,7 +32,7 @@ body {
 
 .nomes, .destaque {
     color: #ff4081; /* Cor destaque para nomes e frase romântica */
-    font-size: 1.5em; /* Tamanho da fonte */
+    font-size: 1.5em; /* Tamanho da fonte maior */
 }
 
 #contador {
@@ -40,16 +40,11 @@ body {
     margin-bottom: 20px; /* Espaçamento para melhor leitura */
 }
 
-.musica {
+.spotify-player {
     margin-top: 20px;
 }
 
-.musica a {
-    color: #007BFF; /* Cor do link da música */
-    font-size: 1.2em;
-    text-decoration: none;
-}
-
-.musica a:hover {
-    text-decoration: underline;
+iframe {
+    border-radius: 12px;
+    width: 100%;
 }
