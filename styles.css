@@ -46,6 +46,7 @@ h1 {
     font-size: 1.5em;
     color: darkmagenta;
     margin-bottom: 20px;
+    font-weight: bold; /* Destacar a frase romântica */
 }
 
 iframe {
@@ -59,7 +60,7 @@ iframe {
         font-size: 2em;
     }
     .countdown {
-        font-size: 1em;
+        font-size: 0.625em; /* Metade do tamanho da fonte do nome */
     }
     .quote {
         font-size: 1.25em;
