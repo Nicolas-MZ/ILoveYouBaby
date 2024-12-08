@@ -68,9 +68,14 @@
 
         // Lista de frases românticas
         const quotes = [
-            "Amar não é olhar um para o outro, é olhar juntos na mesma direção.",
-            "Te amo não por quem tu és, mas por quem sou quando estou contigo.",
-            "Em cada lugar do mundo, eu só quero estar contigo."
+        "Desde que te conheci, cada dia é uma aventura maravilhosa.",
+        "Seu sorriso ilumina meus dias, e seus olhos castanhos me encantam a cada olhar.",
+        "Amo os seus cabelos vermelhos que refletem sua paixão e alegria.",
+        "Você trouxe cor e vida aos meus dias, e eu sou eternamente grato.",
+        "Cada momento com você é um tesouro que guardo no meu coração.",
+        "Os dias ao seu lado são preenchidos com amor e felicidade.",
+        "Você é a melodia que embala meus dias e a paz que acalma meu coração.",
+        "Seu amor é a luz que guia meu caminho e o calor que aquece meu coração."
         ];
 
         // Atualizar a frase romântica
