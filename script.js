@@ -1,56 +1,40 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const track = document.querySelector('.carousel-track');
-    const slides = Array.from(track.children);
-    const nextButton = document.querySelector('.carousel-button-right');
-    const prevButton = document.querySelector('.carousel-button-left');
-
-    const slideWidth = slides[0].getBoundingClientRect().width;
-
-    // Arrange the slides next to one another
-    const setSlidePosition = (slide, index) => {
-        slide.style.left = slideWidth * index + 'px';
-    };
-    slides.forEach(setSlidePosition);
-
-    const moveToSlide = (track, currentSlide, targetSlide) => {
-        track.style.transform = 'translateX(-' + targetSlide.style.left + ')';
-        currentSlide.classList.remove('current-slide');
-        targetSlide.classList.add('current-slide');
-    };
-
-    // Move to the next slide
-    nextButton.addEventListener('click', e => {
-        const currentSlide = track.querySelector('.current-slide');
-        const nextSlide = currentSlide.nextElementSibling;
-        const currentIndex = slides.findIndex(slide => slide === currentSlide);
-        const nextIndex = currentIndex + 1;
-
-        moveToSlide(track, currentSlide, nextSlide);
-
-        if (nextIndex === slides.length - 1) {
-            nextButton.classList.add('is-hidden');
-        }
-        prevButton.classList.remove('is-hidden');
-    });
-
-    // Move to the previous slide
-    prevButton.addEventListener('click', e => {
-        const currentSlide = track.querySelector('.current-slide');
-        const prevSlide = currentSlide.previousElementSibling;
-        const currentIndex = slides.findIndex(slide => slide === currentSlide);
-        const prevIndex = currentIndex - 1;
-
-        moveToSlide(track, currentSlide, prevSlide);
-
-        if (prevIndex === 0) {
-            prevButton.classList.add('is-hidden');
-        }
-        nextButton.classList.remove('is-hidden');
-    });
-});
-
 // Calcular o tempo juntos
 const startDate = new Date('2024-07-21T21:00:00');
 setInterval(() => {
     const now = new Date();
-    const elapsed
+    const elapsed = now - startDate;
+    const years = Math.floor(elapsed / (1000 * 60 * 60 * 24 * 365));
+    const months = Math.floor(elapsed / (1000 * 60 * 60 * 24 * 30)) % 12;
+    const days = Math.floor(elapsed / (1000 * 60 * 60 * 24)) % 30;
+    const hours = Math.floor((elapsed / (1000 * 60 * 60)) % 24);
+    const minutes = Math.floor((elapsed / (1000 * 60)) % 60);
+    const seconds = Math.floor((elapsed / 1000) % 60);
+
+    document.getElementById('years').innerText = years;
+    document.getElementById('months').innerText = months;
+    document.getElementById('days').innerText = days;
+    document.getElementById('hours').innerText = hours;
+    document.getElementById('minutes').innerText = minutes;
+    document.getElementById('seconds').innerText = seconds;
+}, 1000);
+
+// Lista de frases românticas
+const quotes = [
+    "Desde que te conheci, cada dia é uma aventura maravilhosa.",
+    "Seu sorriso ilumina meus dias, e seus olhos castanhos me encantam a cada olhar.",
+    "Amo os seus cabelos vermelhos que refletem sua paixão e alegria.",
+    "Você trouxe cor e vida aos meus dias, e eu sou eternamente grato.",
+    "Cada momento com você é um tesouro que guardo no meu coração.",
+    "Os dias ao seu lado são preenchidos com amor e felicidade.",
+    "Você é a melodia que embala meus dias e a paz que acalma meu coração.",
+    "Seu amor é a luz que guia meu caminho e o calor que aquece meu coração."
+];
+
+// Atualizar a frase romântica
+function updateQuote() {
+    const randomIndex = Math.floor(Math.random() * quotes.length);
+    document.getElementById('quote').innerText = quotes[randomIndex];
+}
+
+updateQuote();
+setInterval(updateQuote, 3000);
