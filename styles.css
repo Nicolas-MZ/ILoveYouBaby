@@ -36,10 +36,23 @@ h1 {
     margin: 10px 0;
 }
 
-.countdown {
-    font-size: 1.25em;
-    color: white;
+.countdown-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
     margin-bottom: 20px;
+}
+
+.countdown-item {
+    background-color: #444;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 1.25em;
+}
+
+.countdown-item span {
+    font-size: 1.5em;
+    color: white;
 }
 
 .quote {
@@ -59,8 +72,11 @@ iframe {
     h1 {
         font-size: 2em;
     }
-    .countdown {
-        font-size: 0.625em; /* Metade do tamanho da fonte do nome */
+    .countdown-item {
+        font-size: 1em;
+    }
+    .countdown-item span {
+        font-size: 1.25em;
     }
     .quote {
         font-size: 1.25em;
