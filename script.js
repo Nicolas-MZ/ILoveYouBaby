@@ -10,7 +10,12 @@ setInterval(() => {
     const minutes = Math.floor((elapsed / (1000 * 60)) % 60);
     const seconds = Math.floor((elapsed / 1000) % 60);
 
-    document.getElementById('timer').innerText = `${years} anos, ${months} meses, ${days} dias, ${hours} horas, ${minutes} minutos e ${seconds} segundos`;
+    document.getElementById('years').innerText = years;
+    document.getElementById('months').innerText = months;
+    document.getElementById('days').innerText = days;
+    document.getElementById('hours').innerText = hours;
+    document.getElementById('minutes').innerText = minutes;
+    document.getElementById('seconds').innerText = seconds;
 }, 1000);
 
 // Lista de frases românticas
@@ -32,4 +37,4 @@ function updateQuote() {
 }
 
 updateQuote();
-setInterval(updateQuote, 10000);
+setInterval(updateQuote, 3000);
