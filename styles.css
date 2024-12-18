@@ -7,7 +7,6 @@ body {
     align-items: center;
     height: 100vh;
     margin: 0;
-    overflow: hidden;
 }
 
 .container {
@@ -20,54 +19,15 @@ body {
     width: 90%;
 }
 
-.carousel {
-    position: relative;
-    width: 100%;
-    overflow: hidden;
-}
-
-.carousel-track-container {
-    position: relative;
-    width: 100%;
-}
-
-.carousel-track {
+.photo-container {
     display: flex;
-    transition: transform 0.5s ease-in-out;
+    justify-content: center;
+    margin-bottom: 20px;
 }
 
-.carousel-slide {
-    min-width: 100%;
-    box-sizing: border-box;
-}
-
-.carousel-image {
-    width: 100%;
+img {
+    max-width: 100%;
     border-radius: 10px;
-}
-
-.carousel-button {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.5);
-    border: none;
-    color: white;
-    font-size: 2em;
-    cursor: pointer;
-    z-index: 1;
-}
-
-.carousel-button-left {
-    left: 10px;
-}
-
-.carousel-button-right {
-    right: 10px;
-}
-
-.carousel-button.is-hidden {
-    display: none;
 }
 
 h1 {
@@ -88,8 +48,8 @@ h1 {
     padding: 10px;
     border-radius: 10px;
     font-size: 1.25em;
-    width: 60px;
-    height: 60px;
+    width: 80px;
+    height: 80px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -105,7 +65,7 @@ h1 {
     font-size: 1.5em;
     color: darkmagenta;
     margin-bottom: 20px;
-    font-weight: bold;
+    font-weight: bold; /* Destacar a frase romântica */
 }
 
 iframe {
@@ -120,8 +80,8 @@ iframe {
     }
     .countdown-item {
         font-size: 1em;
-        width: 50px;
-        height: 50px;
+        width: 60px;
+        height: 60px;
     }
     .countdown-item span {
         font-size: 1.25em;
