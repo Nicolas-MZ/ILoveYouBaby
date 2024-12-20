@@ -1,6 +1,6 @@
 body {
-    background-color: #2C2C34;
-    color: #F8F8F8;
+    background-color: #F5F5F5; /* Fundo cinza claro */
+    color: #2C2C2C; /* Texto primário em cinza escuro */
     font-family: Arial, sans-serif;
     display: flex;
     justify-content: center;
@@ -10,10 +10,10 @@ body {
 }
 
 .container {
-    background-color: #454545;
+    background-color: #FFFFFF; /* Componentes em branco puro */
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(255, 193, 7, 0.5); /* Sombra dourada */
+    box-shadow: 0 0 10px rgba(165, 42, 42, 0.5); /* Sombra marrom avermelhada suave */
     text-align: center;
     max-width: 500px;
     width: 90%;
@@ -44,7 +44,7 @@ h1 {
 }
 
 .countdown-item {
-    background-color: #454545;
+    background-color: #FFFFFF; /* Contêineres em branco puro */
     padding: 10px;
     border-radius: 10px;
     font-size: 1.25em;
@@ -52,7 +52,7 @@ h1 {
 
 .countdown-item span {
     font-size: 1.5em;
-    color: #F8F8F8; /* Números em branco */
+    color: #2C2C2C; /* Números em cinza escuro */
 }
 
 .quote {
