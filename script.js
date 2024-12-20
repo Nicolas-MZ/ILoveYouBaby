@@ -2,30 +2,36 @@
 const startDate = new Date('2024-07-21T21:00:00');
 setInterval(() => {
     const now = new Date();
-    const totalYears = now.getFullYear() - startDate.getFullYear();
-    const totalMonths = now.getMonth() - startDate.getMonth() + (12 * totalYears);
+
+    const years = now.getFullYear() - startDate.getFullYear();
+    const months = now.getMonth() - startDate.getMonth() + (12 * (now.getFullYear() - startDate.getFullYear()));
+    const daysInMonth = new Date(now.getFullYear(), now.getMonth() + 1, 0).getDate();
+    const days = now.getDate() - startDate.getDate();
     
-    // Contar os anos bissextos
-    function isLeapYear(year) {
-        return (year % 4 === 0 && year % 100 !== 0) || (year % 400 === 0);
+    let totalMonths = months;
+    if (days < 0) {
+        totalMonths--;
     }
     
-    const totalDays = Math.floor((now - startDate) / (1000 * 60 * 60 * 24));
-    const daysInStartMonth = new Date(startDate.getFullYear(), startDate.getMonth() + 1, 0).getDate();
+    const actualYears = Math.floor(totalMonths / 12);
+    const actualMonths = totalMonths % 12;
     
-    const years = Math.floor(totalMonths / 12);
-    const months = (totalMonths % 12) - (now.getDate() < startDate.getDate() ? 1 : 0);
-    const days = (now.getDate() + (now.getDate() < startDate.getDate() ? daysInStartMonth : 0)) - startDate.getDate();
-    const hours = Math.floor((totalDays * 24 + now.getHours() - startDate.getHours()) % 24);
-    const minutes = Math.floor((totalDays * 24 * 60 + now.getMinutes() - startDate.getMinutes()) % 60);
-    const seconds = Math.floor((totalDays * 24 * 60 * 60 + now.getSeconds() - startDate.getSeconds()) % 60);
+    const actualDays = now.getDate() - startDate.getDate();
+    if (actualDays < 0) {
+        const prevMonth = new Date(now.getFullYear(), now.getMonth(), 0).getDate();
+        actualDays += prevMonth;
+    }
     
-    document.getElementById('years').innerText = years;
-    document.getElementById('months').innerText = months;
-    document.getElementById('days').innerText = days;
-    document.getElementById('hours').innerText = hours;
-    document.getElementById('minutes').innerText = minutes;
-    document.getElementById('seconds').innerText = seconds;
+    const hours = now.getHours() - startDate.getHours();
+    const minutes = now.getMinutes() - startDate.getMinutes();
+    const seconds = now.getSeconds() - startDate.getSeconds();
+
+    document.getElementById('years').innerText = actualYears;
+    document.getElementById('months').innerText = actualMonths;
+    document.getElementById('days').innerText = actualDays;
+    document.getElementById('hours').innerText = hours >= 0 ? hours : 24 + hours;
+    document.getElementById('minutes').innerText = minutes >= 0 ? minutes : 60 + minutes;
+    document.getElementById('seconds').innerText = seconds >= 0 ? seconds : 60 + seconds;
 }, 1000);
 
 // Lista de frases românticas
