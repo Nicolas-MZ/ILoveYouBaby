@@ -2,26 +2,24 @@
 const startDate = new Date('2024-07-21T21:00:00');
 setInterval(() => {
     const now = new Date();
-
-    const years = now.getFullYear() - startDate.getFullYear();
-    const months = now.getMonth() - startDate.getMonth() + (12 * (now.getFullYear() - startDate.getFullYear()));
-    const daysInMonth = new Date(now.getFullYear(), now.getMonth() + 1, 0).getDate();
-    const days = now.getDate() - startDate.getDate();
+    const totalYears = now.getFullYear() - startDate.getFullYear();
+    const totalMonths = now.getMonth() - startDate.getMonth() + (12 * totalYears);
     
-    let totalMonths = months;
-    if (days < 0) {
-        totalMonths--;
+    function isLeapYear(year) {
+        return (year % 4 === 0 && year % 100 !== 0) || (year % 400 === 0);
     }
     
-    const actualYears = Math.floor(totalMonths / 12);
-    const actualMonths = totalMonths % 12;
+    const daysInMonth = (year, month) => new Date(year, month + 1, 0).getDate();
+    let actualMonths = totalMonths;
+    let actualYears = Math.floor(actualMonths / 12);
+    actualMonths %= 12;
     
-    const actualDays = now.getDate() - startDate.getDate();
+    let actualDays = now.getDate() - startDate.getDate();
     if (actualDays < 0) {
-        const prevMonth = new Date(now.getFullYear(), now.getMonth(), 0).getDate();
-        actualDays += prevMonth;
+        actualMonths--;
+        actualDays += daysInMonth(now.getFullYear(), now.getMonth() - 1);
     }
-    
+
     const hours = now.getHours() - startDate.getHours();
     const minutes = now.getMinutes() - startDate.getMinutes();
     const seconds = now.getSeconds() - startDate.getSeconds();
