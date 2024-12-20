@@ -2,14 +2,24 @@
 const startDate = new Date('2024-07-21T21:00:00');
 setInterval(() => {
     const now = new Date();
-    const elapsed = now - startDate;
-    const years = Math.floor(elapsed / (1000 * 60 * 60 * 24 * 365));
-    const months = Math.floor(elapsed / (1000 * 60 * 60 * 24 * 30)) % 12;
-    const days = Math.floor(elapsed / (1000 * 60 * 60 * 24)) % 30;
-    const hours = Math.floor((elapsed / (1000 * 60 * 60)) % 24);
-    const minutes = Math.floor((elapsed / (1000 * 60)) % 60);
-    const seconds = Math.floor((elapsed / 1000) % 60);
-
+    const totalYears = now.getFullYear() - startDate.getFullYear();
+    const totalMonths = now.getMonth() - startDate.getMonth() + (12 * totalYears);
+    
+    // Contar os anos bissextos
+    function isLeapYear(year) {
+        return (year % 4 === 0 && year % 100 !== 0) || (year % 400 === 0);
+    }
+    
+    const totalDays = Math.floor((now - startDate) / (1000 * 60 * 60 * 24));
+    const daysInStartMonth = new Date(startDate.getFullYear(), startDate.getMonth() + 1, 0).getDate();
+    
+    const years = Math.floor(totalMonths / 12);
+    const months = (totalMonths % 12) - (now.getDate() < startDate.getDate() ? 1 : 0);
+    const days = (now.getDate() + (now.getDate() < startDate.getDate() ? daysInStartMonth : 0)) - startDate.getDate();
+    const hours = Math.floor((totalDays * 24 + now.getHours() - startDate.getHours()) % 24);
+    const minutes = Math.floor((totalDays * 24 * 60 + now.getMinutes() - startDate.getMinutes()) % 60);
+    const seconds = Math.floor((totalDays * 24 * 60 * 60 + now.getSeconds() - startDate.getSeconds()) % 60);
+    
     document.getElementById('years').innerText = years;
     document.getElementById('months').innerText = months;
     document.getElementById('days').innerText = days;
