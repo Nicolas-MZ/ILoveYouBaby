@@ -37,4 +37,4 @@ function updateQuote() {
 }
 
 updateQuote();
-setInterval(updateQuote, 3000);
+setInterval(updateQuote, 10000);
