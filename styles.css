@@ -1,6 +1,6 @@
 body {
-    background-color: black;
-    color: white;
+    background-color: #2C2C34;
+    color: #F8F8F8;
     font-family: Arial, sans-serif;
     display: flex;
     justify-content: center;
@@ -10,10 +10,10 @@ body {
 }
 
 .container {
-    background-color: #333;
+    background-color: #454545;
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+    box-shadow: 0 0 10px rgba(255, 193, 7, 0.5); /* Sombra dourada */
     text-align: center;
     max-width: 500px;
     width: 90%;
@@ -32,7 +32,7 @@ img {
 
 h1 {
     font-size: 2.5em;
-    color: darkmagenta;
+    color: #E57373; /* Texto em vermelho suave */
     margin: 10px 0;
 }
 
@@ -44,7 +44,7 @@ h1 {
 }
 
 .countdown-item {
-    background-color: #444;
+    background-color: #454545;
     padding: 10px;
     border-radius: 10px;
     font-size: 1.25em;
@@ -52,12 +52,12 @@ h1 {
 
 .countdown-item span {
     font-size: 1.5em;
-    color: white;
+    color: #FFC107; /* Destaques em dourado */
 }
 
 .quote {
     font-size: 1.5em;
-    color: darkmagenta;
+    color: #E57373;
     margin-bottom: 20px;
     font-weight: bold; /* Destacar a frase romântica */
 }
