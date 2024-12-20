@@ -2,34 +2,51 @@
 const startDate = new Date('2024-07-21T21:00:00');
 setInterval(() => {
     const now = new Date();
-    const totalYears = now.getFullYear() - startDate.getFullYear();
-    const totalMonths = now.getMonth() - startDate.getMonth() + (12 * totalYears);
-    
+
     function isLeapYear(year) {
         return (year % 4 === 0 && year % 100 !== 0) || (year % 400 === 0);
     }
     
     const daysInMonth = (year, month) => new Date(year, month + 1, 0).getDate();
-    let actualMonths = totalMonths;
-    let actualYears = Math.floor(actualMonths / 12);
-    actualMonths %= 12;
     
-    let actualDays = now.getDate() - startDate.getDate();
-    if (actualDays < 0) {
-        actualMonths--;
-        actualDays += daysInMonth(now.getFullYear(), now.getMonth() - 1);
+    let years = now.getFullYear() - startDate.getFullYear();
+    let months = now.getMonth() - startDate.getMonth();
+    let days = now.getDate() - startDate.getDate();
+    let hours = now.getHours() - startDate.getHours();
+    let minutes = now.getMinutes() - startDate.getMinutes();
+    let seconds = now.getSeconds() - startDate.getSeconds();
+
+    if (seconds < 0) {
+        seconds += 60;
+        minutes--;
     }
 
-    const hours = now.getHours() - startDate.getHours();
-    const minutes = now.getMinutes() - startDate.getMinutes();
-    const seconds = now.getSeconds() - startDate.getSeconds();
+    if (minutes < 0) {
+        minutes += 60;
+        hours--;
+    }
 
-    document.getElementById('years').innerText = actualYears;
-    document.getElementById('months').innerText = actualMonths;
-    document.getElementById('days').innerText = actualDays;
-    document.getElementById('hours').innerText = hours >= 0 ? hours : 24 + hours;
-    document.getElementById('minutes').innerText = minutes >= 0 ? minutes : 60 + minutes;
-    document.getElementById('seconds').innerText = seconds >= 0 ? seconds : 60 + seconds;
+    if (hours < 0) {
+        hours += 24;
+        days--;
+    }
+
+    if (days < 0) {
+        months--;
+        days += daysInMonth(now.getFullYear(), now.getMonth() - 1);
+    }
+
+    if (months < 0) {
+        years--;
+        months += 12;
+    }
+
+    document.getElementById('years').innerText = years;
+    document.getElementById('months').innerText = months;
+    document.getElementById('days').innerText = days;
+    document.getElementById('hours').innerText = hours;
+    document.getElementById('minutes').innerText = minutes;
+    document.getElementById('seconds').innerText = seconds;
 }, 1000);
 
 // Lista de frases românticas
@@ -40,8 +57,8 @@ const quotes = [
     "Os dias ao seu lado são preenchidos com amor e felicidade.",
     "Você é a melodia que embala meus dias e a paz que acalma meu coração.",
     "Seu amor é a luz que guia meu caminho e o calor que aquece meu coração.",
-    "Desde o dia em que te conheci, meu coração bate mais forte",
-    "Cada momento ao seu lado é unico, e fica eternizado em meu coração"
+    "Desde o dia em que te conheci, meu coração bate mais forte.",
+    "Cada momento ao seu lado é único, e fica eternizado em meu coração."
 ];
 
 // Atualizar a frase romântica
